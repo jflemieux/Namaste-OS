@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: namaste os
+name: namaste-os
 # description will be included in the image's metadata
 description: Personal distro by and for JFL
 
