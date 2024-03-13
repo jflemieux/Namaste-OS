@@ -29,12 +29,15 @@ modules:
       - neovim 
       - libvirt
       - virt-manager 
+      - virt-install
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - qemu-kvm
+      - virt-viewer
       - zsh
       - snapper
       - podman
       - podman-compose
-      - swtpm
-      - swtpm-selinux
       # - micro
       # - starship
     remove:
@@ -70,6 +73,8 @@ modules:
         - nz.mega.MEGAsync
         - org.chromium.Chromium
         - org.chromium.Chromium.Codecs
+        - com.github.Eloston.UngoogledChromium
+        - com.github.Eloston.UngoogledChromium.Codecs
         - org.fedoraproject.MediaWriter
         - org.gimp.GIMP
         - org.mozilla.Thunderbird
