@@ -1,0 +1,97 @@
+# image will be published to ghcr.io/<user>/<name>
+name: namaste-os
+# description will be included in the image's metadata
+description: Personal distro by and for JFL
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/kinoite-main
+image-version: 39 # latest is also supported if you want new updates ASAP
+
+# module configuration, executed in order
+# you can include multiple instances of the same module
+modules:
+  - type: files
+    files:
+      - usr: /usr
+          # copies config/files/usr into your image's /usr.
+          # put configuration files you want in /etc/ on a booted system 
+          # in /usr/etc/ in the image. read more in files module reference.
+
+  - type: rpm-ostree
+    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    install:
+      - bridge-utils 
+      - clblast 
+      - clblast-devel 
+      - distrobox 
+      - input-remapper
+      - langpacks-en 
+      - neovim 
+      - libvirt
+      - virt-manager 
+      - virt-install
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - qemu-kvm
+      - virt-viewer
+      - zsh
+      - snapper
+      - podman
+      - podman-compose
+      # - micro
+      # - starship
+    remove:
+      # example: removing firefox (in favor of the flatpak)
+      # "firefox" is the main package, "firefox-langpacks" is a dependency
+      # - firefox
+      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
+
+  - type: default-flatpaks
+    notify: false # Send notification after install/uninstall is finished (true/false)
+    system:
+      # If no repo information is specified, Flathub will be used by default
+      # repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
+      # repo-name: flathub
+      # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
+      install:
+        - com.discordapp.Discord
+        - com.github.PintaProject.Pinta
+        - com.github.tchx84.Flatseal
+        - com.github.wwmm.easyeffects
+        - com.google.Chrome
+        - com.microsoft.Edge
+        - com.nextcloud.desktopclient.nextcloud
+        - com.obsproject.Studio
+        - com.obsproject.Studio.Plugin.BackgroundRemoval
+        - com.obsproject.Studio.Plugin.OBSVkCapture
+        - com.slack.Slack
+        - com.ultimaker.cura
+        - com.valvesoftware.Steam
+        - com.visualstudio.code
+        - hu.irl.cameractrls
+        - nz.mega.MEGAsync
+        - org.chromium.Chromium
+        - org.chromium.Chromium.Codecs
+        - com.github.Eloston.UngoogledChromium
+        - com.github.Eloston.UngoogledChromium.Codecs
+        - org.fedoraproject.MediaWriter
+        - org.gimp.GIMP
+        - org.mozilla.Thunderbird
+        - org.qbittorrent.qBittorrent
+        - org.remmina.Remmina
+        - org.signal.Signal
+        - org.speedcrunch.SpeedCrunch
+        - org.videolan.VLC
+        - uk.co.powdertoy.tpt
+        - us.zoom.Zoom
+        # - org.mozilla.firefox
+        # - org.gnome.Loupe
+        # - one.ablaze.floorp//lightning # This is an example of flatpak which has multiple branches in selection (flatpak//branch).
+        # Flatpak runtimes are not supported (like org.winehq.Wine//stable-23.08),
+
+      # only normal flatpak applications are (like Floorp Lightning web browser in this example).
+      # Installing different branches of the same Flatpak is not supported.
+      remove:
+        # - org.gnome.eog
+
+  - type: signing # this sets up the proper policy & signing files for signed images to work fully
