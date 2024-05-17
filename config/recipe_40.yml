@@ -38,6 +38,8 @@ modules:
       - snapper
       - podman
       - podman-compose
+      - tailscale
+      - screen
       # - micro
       # - starship
     remove:
