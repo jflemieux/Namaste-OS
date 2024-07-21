@@ -68,14 +68,16 @@ modules:
         - com.obsproject.Studio.Plugin.OBSVkCapture
         - com.slack.Slack
         - com.ultimaker.cura
+        - net.lutris.Lutris
         - com.valvesoftware.Steam
+        - net.davidotek.pupgui2 
         - com.visualstudio.code
         - hu.irl.cameractrls
         - nz.mega.MEGAsync
         - org.chromium.Chromium
         - org.chromium.Chromium.Codecs
-        - com.github.Eloston.UngoogledChromium
-        - com.github.Eloston.UngoogledChromium.Codecs
+        - io.github.ungoogled_software.ungoogled_chromium
+        - io.github.ungoogled_software.ungoogled_chromium.Codecs
         - org.fedoraproject.MediaWriter
         - org.gimp.GIMP
         - org.mozilla.Thunderbird
@@ -84,6 +86,8 @@ modules:
         - org.signal.Signal
         - org.speedcrunch.SpeedCrunch
         - org.videolan.VLC
+        - org.gimp.GIMP
+        - org.onlyoffice.desktopeditors
         - uk.co.powdertoy.tpt
         - us.zoom.Zoom
         # - org.mozilla.firefox
