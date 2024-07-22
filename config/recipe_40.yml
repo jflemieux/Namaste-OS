@@ -17,7 +17,6 @@ modules:
       - bridge-utils 
       - clblast 
       - clblast-devel 
-      - v4l2loopback
       - distrobox 
       - input-remapper
       - langpacks-en 
@@ -86,5 +85,15 @@ modules:
       # Installing different branches of the same Flatpak is not supported.
       remove:
         # - org.gnome.eog
+
+  - type: script
+    snippets:
+      - "wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/bin/yt-dlp"
+      - "chmod a+rx /usr/bin/yt-dlp"
+
+  - type: systemd
+    system:
+      enabled:
+        - input-remapper.service
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
