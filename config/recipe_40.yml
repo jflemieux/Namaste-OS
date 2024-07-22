@@ -74,6 +74,7 @@ modules:
         - org.speedcrunch.SpeedCrunch
         - org.videolan.VLC
         - org.onlyoffice.desktopeditors
+        - org.kde.okular
         - uk.co.powdertoy.tpt
         - us.zoom.Zoom
         # - org.mozilla.firefox
