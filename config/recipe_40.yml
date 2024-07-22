@@ -10,12 +10,6 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 # module configuration, executed in order
 # you can include multiple instances of the same module
 modules:
-  - type: files
-    files:
-      - usr: /usr
-          # copies config/files/usr into your image's /usr.
-          # put configuration files you want in /etc/ on a booted system 
-          # in /usr/etc/ in the image. read more in files module reference.
 
   - type: rpm-ostree
     repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
@@ -38,14 +32,9 @@ modules:
       - snapper
       - podman
       - podman-compose
-      - screen
+      - fish
       # - micro
       # - starship
-    remove:
-      # example: removing firefox (in favor of the flatpak)
-      # "firefox" is the main package, "firefox-langpacks" is a dependency
-      # - firefox
-      # - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
@@ -76,8 +65,6 @@ modules:
         - nz.mega.MEGAsync
         - org.chromium.Chromium
         - org.chromium.Chromium.Codecs
-        - io.github.ungoogled_software.ungoogled_chromium
-        - io.github.ungoogled_software.ungoogled_chromium.Codecs
         - org.fedoraproject.MediaWriter
         - org.gimp.GIMP
         - org.mozilla.Thunderbird
@@ -86,7 +73,6 @@ modules:
         - org.signal.Signal
         - org.speedcrunch.SpeedCrunch
         - org.videolan.VLC
-        - org.gimp.GIMP
         - org.onlyoffice.desktopeditors
         - uk.co.powdertoy.tpt
         - us.zoom.Zoom
