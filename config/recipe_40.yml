@@ -20,6 +20,8 @@ modules:
       - distrobox 
       - input-remapper
       - langpacks-en 
+      - v4l2loopback
+      - akmod-v4l2loopback
       - neovim 
       - libvirt
       - virt-manager 
