@@ -17,6 +17,7 @@ modules:
       - bridge-utils 
       - clblast 
       - clblast-devel 
+      - v4l2loopback
       - distrobox 
       - input-remapper
       - langpacks-en 
