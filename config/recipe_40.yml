@@ -65,7 +65,6 @@ modules:
         - hu.irl.cameractrls
         - nz.mega.MEGAsync
         - org.chromium.Chromium
-        - org.chromium.Chromium.Codecs
         - org.fedoraproject.MediaWriter
         - org.gimp.GIMP
         - org.mozilla.Thunderbird
