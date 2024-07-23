@@ -44,7 +44,6 @@ modules:
       # repo-name: flathub
       # repo-title: "Flathub (system-wide)" # Optional; this sets the remote's user-facing name in graphical frontends like GNOME Software
       install:
-        - one.ablaze.floorp
         - com.discordapp.Discord
         - com.github.PintaProject.Pinta
         - com.github.tchx84.Flatseal
@@ -57,23 +56,26 @@ modules:
         - com.obsproject.Studio.Plugin.OBSVkCapture
         - com.slack.Slack
         - com.ultimaker.cura
-        - net.lutris.Lutris
         - com.valvesoftware.Steam
-        - net.davidotek.pupgui2 
         - com.visualstudio.code
         - hu.irl.cameractrls
+        - net.davidotek.pupgui2 
+        - net.lutris.Lutris
         - nz.mega.MEGAsync
+        - one.ablaze.floorp
         - org.chromium.Chromium
         - org.fedoraproject.MediaWriter
         - org.gimp.GIMP
+        - org.kde.gwenview
+        - org.kde.okular
+        - org.kde.yakuake
         - org.mozilla.Thunderbird
+        - org.onlyoffice.desktopeditors
         - org.qbittorrent.qBittorrent
         - org.remmina.Remmina
         - org.signal.Signal
         - org.speedcrunch.SpeedCrunch
         - org.videolan.VLC
-        - org.onlyoffice.desktopeditors
-        - org.kde.okular
         - uk.co.powdertoy.tpt
         - us.zoom.Zoom
         # - org.mozilla.firefox
