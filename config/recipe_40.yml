@@ -36,6 +36,11 @@ modules:
       # - micro
       # - starship
 
+  - type: rpm-ostree
+    repos: https://dl.winehq.org/wine-builds/fedora/40/winehq.repo
+    install:
+      - winehq-staging
+
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
     system:
