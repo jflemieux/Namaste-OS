@@ -36,7 +36,6 @@ modules:
       - podman-compose
       - fish
       - winehq-staging
-      - v4l2loopback
       # - micro
       # - starship
 
@@ -97,6 +96,12 @@ modules:
     snippets:
       - "wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/bin/yt-dlp"
       - "chmod a+rx /usr/bin/yt-dlp"
+
+  - type: akmods
+    #base: asus # if not specified, classic "main" base is used by default
+    install:
+      - v4l2loopback
+      - winesync
 
   - type: systemd
     system:
