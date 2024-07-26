@@ -36,6 +36,7 @@ modules:
       - podman-compose
       - fish
       - winehq-staging
+      - v4l2loopback
       # - micro
       # - starship
 
