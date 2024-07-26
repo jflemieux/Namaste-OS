@@ -19,7 +19,6 @@ modules:
   - type: rpm-ostree
     repos: # 
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
-      - https://dl.winehq.org/wine-builds/fedora/%OS_VERSION%/winehq.repo
     install:
       - bridge-utils 
       - clblast 
@@ -40,7 +39,6 @@ modules:
       - podman
       - podman-compose
       - fish
-      - winehq-staging
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
@@ -80,6 +78,7 @@ modules:
         - org.videolan.VLC
         - uk.co.powdertoy.tpt
         - us.zoom.Zoom
+        - org.winehq.Wine
 
   - type: systemd
     system:
