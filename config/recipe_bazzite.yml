@@ -52,7 +52,6 @@ modules:
         - com.obsproject.Studio.Plugin.OBSVkCapture
         - com.slack.Slack
         - com.ultimaker.cura
-        - com.valvesoftware.Steam
         - com.visualstudio.code
         - hu.irl.cameractrls
         - net.davidotek.pupgui2 
