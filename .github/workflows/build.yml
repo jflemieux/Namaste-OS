@@ -20,10 +20,9 @@ jobs:
     strategy:
       fail-fast: false # stop GH from cancelling all matrix builds if one fails
       matrix:
-        recipe: [recipe_40.yml]
-          # !! Add your recipes here 
-          # - recipe_40.yml
-          # - recipe_39.yml
+        recipe:
+          - recipe_40.yml
+          - recipe_bazzite.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
