@@ -1,0 +1,89 @@
+name: namaste-os
+description: Personal distro by and for JFL
+
+base-image: ghcr.io/ublue-os/bazzite
+image-version: 40 # latest is also supported if you want new updates ASAP
+
+modules:
+
+  - type: akmods
+    base: main # if not specified, classic "main" base is used by default
+    install:
+      - v4l2loopback
+
+  - type: script
+    snippets:
+      - "wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/bin/yt-dlp"
+      - "chmod a+rx /usr/bin/yt-dlp"
+
+  - type: rpm-ostree
+    repos: # 
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    install:
+      - fastfetch
+      - bridge-utils 
+      - clblast 
+      - clblast-devel 
+      - distrobox 
+      - input-remapper
+      - langpacks-en 
+      - neovim 
+      - libvirt
+      - virt-manager 
+      - virt-install
+      - libvirt-daemon-config-network
+      - libvirt-daemon-kvm
+      - qemu-kvm
+      - virt-viewer
+      - zsh
+      - snapper
+      - podman
+      - podman-compose
+      - fish
+
+  - type: default-flatpaks
+    notify: false # Send notification after install/uninstall is finished (true/false)
+    system:
+      install:
+        - com.discordapp.Discord
+        - com.github.PintaProject.Pinta
+        - com.github.tchx84.Flatseal
+        - com.github.wwmm.easyeffects
+        - com.google.Chrome
+        - com.microsoft.Edge
+        - com.nextcloud.desktopclient.nextcloud
+        - com.obsproject.Studio
+        - com.obsproject.Studio.Plugin.BackgroundRemoval
+        - com.obsproject.Studio.Plugin.OBSVkCapture
+        - com.slack.Slack
+        - com.ultimaker.cura
+        - com.valvesoftware.Steam
+        - com.visualstudio.code
+        - hu.irl.cameractrls
+        - net.davidotek.pupgui2 
+        - net.lutris.Lutris
+        - nz.mega.MEGAsync
+        - one.ablaze.floorp
+        - org.chromium.Chromium
+        - org.fedoraproject.MediaWriter
+        - org.gimp.GIMP
+        - org.kde.gwenview
+        - org.kde.okular
+        - org.kde.yakuake
+        - org.mozilla.Thunderbird
+        - org.onlyoffice.desktopeditors
+        - org.qbittorrent.qBittorrent
+        - org.remmina.Remmina
+        - org.signal.Signal
+        - org.speedcrunch.SpeedCrunch
+        - org.videolan.VLC
+        - uk.co.powdertoy.tpt
+        - us.zoom.Zoom
+        - org.winehq.Wine
+
+  - type: systemd
+    system:
+      enabled:
+        - input-remapper.service
+
+  - type: signing
