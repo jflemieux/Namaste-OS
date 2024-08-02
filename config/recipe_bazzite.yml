@@ -6,11 +6,6 @@ image-version: 40 # latest is also supported if you want new updates ASAP
 
 modules:
 
-  - type: akmods
-    base: main # if not specified, classic "main" base is used by default
-    install:
-      - v4l2loopback
-
   - type: script
     snippets:
       - "wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/bin/yt-dlp"
