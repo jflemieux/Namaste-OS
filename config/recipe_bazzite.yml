@@ -1,4 +1,4 @@
-name: namaste-os
+name: namaste-os-bazzite
 description: Personal distro by and for JFL
 
 base-image: ghcr.io/ublue-os/bazzite
