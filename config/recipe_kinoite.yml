@@ -1,4 +1,4 @@
-name: namaste-os
+name: namaste-os-kinoite
 description: Personal distro by and for JFL
 
 base-image: ghcr.io/ublue-os/kinoite-main
