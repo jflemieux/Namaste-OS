@@ -78,7 +78,6 @@ modules:
         - org.videolan.VLC
         - uk.co.powdertoy.tpt
         - us.zoom.Zoom
-        - org.winehq.Wine
 
   - type: systemd
     system:
