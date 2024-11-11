@@ -2,7 +2,7 @@ name: namaste-os-bazzite
 description: Personal distro by and for JFL
 
 base-image: ghcr.io/ublue-os/bazzite
-image-version: 40 # latest is also supported if you want new updates ASAP
+image-version: 41 # latest is also supported if you want new updates ASAP
 
 modules:
 
@@ -25,6 +25,8 @@ modules:
       - langpacks-en 
       - neovim 
       - libvirt
+      - libheif
+      - libheif-tools
       - virt-manager 
       - virt-install
       - libvirt-daemon-config-network
