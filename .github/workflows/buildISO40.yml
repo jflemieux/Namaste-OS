@@ -17,5 +17,5 @@ jobs:
         options: --privileged
       steps:
       - name: Build Container Installer
-        uses: JasonN3/build-container-installer@v1.2.3
+        uses: JasonN3/build-container-installer@v1.2.4
             
