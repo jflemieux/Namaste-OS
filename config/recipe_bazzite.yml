@@ -18,6 +18,7 @@ modules:
       - https://packages.microsoft.com/yumrepos/vscode/config.repo
     install:
       - bridge-utils 
+      - htop
       - clblast 
       - clblast-devel 
       - distrobox 
