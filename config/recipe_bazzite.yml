@@ -16,6 +16,7 @@ modules:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
       - https://download.docker.com/linux/fedora/docker-ce.repo
       - https://packages.microsoft.com/yumrepos/vscode/config.repo
+      - https://ftp.osuosl.org/pub/sftpgo/yum/x86_64/sftpgo.repo
     install:
       - bridge-utils 
       - htop
@@ -45,6 +46,7 @@ modules:
       - code
       - nmap
       - s3fs-fuse
+      - sftpgo
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
