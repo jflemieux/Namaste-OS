@@ -44,7 +44,7 @@ modules:
       - docker-compose-plugin
       - code
       - nmap
-      - s3fs-fuse
+      - rclone
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
