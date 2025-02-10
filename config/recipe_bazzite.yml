@@ -45,6 +45,7 @@ modules:
       - code
       - nmap
       - rclone
+      - rclone-browser
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
