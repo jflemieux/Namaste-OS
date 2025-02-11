@@ -57,9 +57,6 @@ modules:
         - com.google.Chrome
         - com.microsoft.Edge
         - com.nextcloud.desktopclient.nextcloud
-        - com.obsproject.Studio
-        - com.obsproject.Studio.Plugin.BackgroundRemoval
-        - com.obsproject.Studio.Plugin.OBSVkCapture
         - com.slack.Slack
         - hu.irl.cameractrls
         - net.davidotek.pupgui2 
