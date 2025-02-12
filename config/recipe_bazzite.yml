@@ -61,6 +61,8 @@ modules:
         - hu.irl.cameractrls
         - net.davidotek.pupgui2 
         - net.lutris.Lutris
+        - org.freedesktop.Platform.VulkanLayer.gamescope
+        - org.freedesktop.Platform.VulkanLayer.MangoHud
         - nz.mega.MEGAsync
         - org.fedoraproject.MediaWriter
         - org.gimp.GIMP
