@@ -60,7 +60,6 @@ modules:
         - hu.irl.cameractrls
         - net.davidotek.pupgui2 
         - net.lutris.Lutris
-        - nz.mega.MEGAsync
         - org.fedoraproject.MediaWriter
         - org.gimp.GIMP
         - org.kde.gwenview
