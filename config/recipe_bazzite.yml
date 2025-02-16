@@ -44,7 +44,6 @@ modules:
       - docker-compose-plugin
       - code
       - nmap
-      - wine
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
