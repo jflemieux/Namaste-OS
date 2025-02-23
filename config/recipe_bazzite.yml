@@ -44,6 +44,7 @@ modules:
       - docker-compose-plugin
       - code
       - nmap
+      - rclone
 
   - type: default-flatpaks
     notify: false # Send notification after install/uninstall is finished (true/false)
