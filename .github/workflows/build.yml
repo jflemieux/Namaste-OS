@@ -22,7 +22,7 @@ jobs:
       matrix:
         recipe:
           # - recipe_kinoite.yml
-          - recipe_bazzite.yml
+          - bazzite.yml
     steps:
        # the build is fully handled by the reusable github action
       - name: Build Custom Image
